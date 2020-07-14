@@ -6,19 +6,17 @@ class School
     @roster = {}
   end
 
-  def add_student(student, grade)
+  def add_student(student_name, grade)
     @roster[grade] ||= []
-    @oster[grade] << student
+    @roster[grade] << student_name
   end
-
-  def grade(enter_grade)
-    @roster[enter_grade]
+  def grade(grade_given)
+    @roster[grade_given]
   end
-
   def sort
-    sorted = {}
-    @roster.each do |grade, students|
-      sorted[grade] = students.sort
+    sorted_roster = {}
+    @roster.each do |key, value|
+      sorted_roster[key] = value.sort
     end
-    sorted
+    sorted_roster
   end
