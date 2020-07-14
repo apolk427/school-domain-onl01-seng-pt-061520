@@ -18,3 +18,5 @@ end
       sorted_roster[key] = value.sort
     end
     sorted_roster
+end
+end
